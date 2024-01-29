@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget {
               children: <Widget>[
                 Container(
                   padding: const EdgeInsets.all(10),
-                  margin: const EdgeInsets.only(left: 10, top: 10),
+                  margin: const EdgeInsets.only(left: 40),
                   decoration: BoxDecoration(
                     color: Colors.yellow[700],
                     border: Border.all(width: 3),
@@ -51,8 +51,8 @@ class MyApp extends StatelessWidget {
                     decoration: const BoxDecoration(
                       color: Colors.white,
                     ),
-                    height: 80,
-                    width: 80,
+                    height: 100,
+                    width: 100,
                     child: const Text('Container 2'),
                   ),
                 ),
@@ -91,18 +91,17 @@ class MyApp extends StatelessWidget {
               ),
             ),
             Column(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
                 Container(
                   decoration: BoxDecoration(
                     color: Colors.black,
-                    
                     shape: BoxShape.circle,
                     border: Border.all(width: 3, color: Colors.white),
                   ),
                   height: 100,
                   width: 100,
-                  margin: const EdgeInsets.only( right: 20, bottom: 100),
+                  margin: const EdgeInsets.only( top: 250, right: 30,bottom: 30),
                   child: const Center(
                     child: Text(
                       'Container 5',
@@ -115,8 +114,9 @@ class MyApp extends StatelessWidget {
                   decoration: const BoxDecoration(
                     color: Colors.red,
                   ),
-                  height: 100,
+                  height: 200,
                   width: 100,
+                  margin: const EdgeInsets.only( top: 230),
                   child: const Align(
                     alignment: Alignment.topLeft,
                     child: Text(
