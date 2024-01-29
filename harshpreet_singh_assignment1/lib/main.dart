@@ -1,5 +1,16 @@
+// ignore_for_file: use_key_in_widget_constructors, todo
+
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
+//https://medium.com/flutter-community/flutter-layout-cheat-sheet-5363348d037e
+
+//This app makes use of the Row, Column,
+//Expanded, Padding, Transform, Container,
+//BoxDecoration, BoxShape, Colors,
+//Border, Center, Align, Alignment,
+//EdgeInsets, Text, and TextStyle Widgets
 void main() {
   runApp(MyApp());
 }
@@ -8,7 +19,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      //first level widget of Material Design
       home: Scaffold(
+        //default route
         backgroundColor: Colors.blueGrey,
         appBar: AppBar(
           title: const Text("App1 - UI Layout"),
@@ -22,25 +35,24 @@ class MyApp extends StatelessWidget {
               children: <Widget>[
                 Container(
                   padding: const EdgeInsets.all(10),
-                  
+                  margin: const EdgeInsets.only(left: 10, top: 10),
                   decoration: BoxDecoration(
-                    color: Colors.yellow,
+                    color: Colors.yellow[700],
                     border: Border.all(width: 3),
                   ),
                   height: 100,
                   width: 100,
-                  child: const Text('Container 1'),
+                  child: const Text('Container1'),
                 ),
                 Transform.rotate(
-                  angle: 0.785398,
+                  angle: pi / 4,
                   child: Container(
                     padding: const EdgeInsets.all(10),
                     decoration: const BoxDecoration(
                       color: Colors.white,
-                      
                     ),
-                    height: 100,
-                    width: 100,
+                    height: 80,
+                    width: 80,
                     child: const Text('Container 2'),
                   ),
                 ),
@@ -55,9 +67,9 @@ class MyApp extends StatelessWidget {
                       padding: const EdgeInsets.all(10),
                       width: 100,
                       height: 100,
-                      decoration: BoxDecoration(
-                        color: Colors.yellow[700],
-                       
+                      margin: const EdgeInsets.only( top: 10, bottom: 20),
+                      decoration: const BoxDecoration(
+                        color: Colors.yellow,
                       ),
                       child: const Center(child: Text('Container 3')),
                     ),
@@ -67,6 +79,7 @@ class MyApp extends StatelessWidget {
                       padding: const EdgeInsets.all(10),
                       width: 100,
                       height: 100,
+                      margin: const EdgeInsets.only( bottom: 10),
                       decoration: const BoxDecoration(
                         color: Colors.blue,
                        
@@ -83,11 +96,13 @@ class MyApp extends StatelessWidget {
                 Container(
                   decoration: BoxDecoration(
                     color: Colors.black,
+                    
                     shape: BoxShape.circle,
                     border: Border.all(width: 3, color: Colors.white),
                   ),
                   height: 100,
                   width: 100,
+                  margin: const EdgeInsets.only( right: 20, bottom: 100),
                   child: const Center(
                     child: Text(
                       'Container 5',
@@ -99,12 +114,11 @@ class MyApp extends StatelessWidget {
                   padding: const EdgeInsets.only(right: 10),
                   decoration: const BoxDecoration(
                     color: Colors.red,
-                   
                   ),
                   height: 100,
                   width: 100,
                   child: const Align(
-                    alignment: Alignment.centerRight,
+                    alignment: Alignment.topLeft,
                     child: Text(
                       'Con 6',
                       style: TextStyle(fontSize: 30),
